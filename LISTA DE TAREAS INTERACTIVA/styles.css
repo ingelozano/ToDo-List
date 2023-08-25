@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('IMAGENES/starry-sky-2675322_1920.jpg') no-repeat center center fixed; /* Ruta de la imagen */
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1f1f1f; /* Un tono más oscuro que el fondo */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+h1 span {
+    display: inline-block;
+    animation-duration: 1.5s;
+}
+
+.animated {
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.title-icon {
+    font-size: 48px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d0d0d0; /* Detalles metálicos */
+    border-radius: 5px;
+    background-color: transparent; /* Fondo transparente */
+    color: #ffffff; /* Texto claro */
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #00aaff; /* Color principal */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+button:hover {
+    background-color: #0091cc; /* Un tono más oscuro para el hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    transform: translateY(-2px); /* Efecto de elevación suave */
+}
+
+button:active {
+    background-color: #4caf50; /* Cambiar color de fondo cuando se presiona */
+    color: white;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.3); /* Sombra más suave al presionar */
+    transform: translateY(0); /* Volver a la posición original */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    transition: opacity 0.5s ease;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #1f1f1f; /* Un tono más oscuro que el fondo */
+    animation: slide-up 0.5s ease;
+}
+
+li span {
+    color: #ffffff; /* Cambia el color a blanco */
+}
+
+.completed {
+    background-color: transparent; /* Cambiar al color secundario (verde lima) */
+    color: #4caf50; /* Cambiar a un color oscuro para el texto */
+    text-decoration: none; /* Eliminar la línea de completado */
+    border-left: 5px solid #009688; /* Agregar un borde izquierdo */
+    padding-left: 15px; /* Espacio entre el borde y el texto */
+}
+
+.completed-btn {
+    background-color: #4caf50; /* Color secundario (verde lima) */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+}
+
+.completed-btn:hover {
+    background-color: #45a049; /* Un tono más oscuro para el hover */
+}
+
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
